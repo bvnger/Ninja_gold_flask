@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class ="container" action ="/process">
+        <div class ="top">
+        <p>Your Gold: {{session['gold']}}
+        
+        </div>
+        <div class ="mid">
+<form class="farm">
+    <h3>Farm</h3>
+    <p>earns 10-20 golds</p>
+    <input type="hidden" name="building"  value="farm"></input>
+    <button type="submit">Find Gold!</button>
+</form>
+<form class="Cave">
+    <h3>Cave</h3>
+    <p>earns 5-10 golds</p>
+    <input type="hidden" name="building"  value="cave"></input>
+    <button type="submit">Find Gold!</button>
+</form>
+<form class="House">
+    <h3>House</h3>
+    <p>earns 2-5 golds</p>
+    <input type="hidden" name="building"  value="house"></input>
+    <button type="submit">Find Gold!</button>
+</form>
+<form class="Casino">
+    <h3>Casino</h3>
+    <p>earn\takes 0-50 golds</p>
+    <input type="hidden" name="building"  value="casino"></input>
+    <button type="submit">Find Gold!</button>
+</form>
+        </div>
+        <div class ="bot">
+            <p>Activities:</p>
+            <textarea>
+            </textarea>
+
+        </div>
+    </div>
+
+</body>
+</html>

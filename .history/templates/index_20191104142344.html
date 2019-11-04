@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!--Import materialize.css-->
+     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css"  media="screen,projection"/>
+     <!-- https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css -->
+  </head>
+<body>
+<div class="row">
+<div class ="col s12">
+    <div class ="card-content black-text">
+        <div  action ="/process">
+            <div class ="top">
+            <p>Your Gold: {{session['gold']}}
+            <button>
+            <a href="/reset" > reset</a> </button>
+            </div>
+            <!-- ########################             -->
+        </div>
+<div class ="mid"> #start of buildings
+<div class="row">
+
+<form class="col s3" action="/process" method="POST">
+    <h3>Farm</h3>
+    <p>earns 10-20 golds</p>
+    <input type="hidden" name="building"  value="farm"></input>
+    <button type="submit">Find Gold!</button>
+</form>
+<form class="col s3" action="/process" method="POST">
+    <h3>Cave</h3>
+    <p>earns 5-10 golds</p>
+    <input type="hidden" name="building"  value="cave"></input>
+    <button type="submit">Find Gold!</button>
+</form>
+<form class="col s3" action="/process" method="POST">
+    <h3>House</h3>
+    <p>earns 2-5 golds</p>
+    <input type="hidden" name="building"  value="house"></input>
+    <button type="submit">Find Gold!</button>
+</form>
+<form class="col s3" action="/process" method="POST">
+    <h3>Casino</h3>
+    <p>earn\takes 0-50 golds</p>
+    <input type="hidden" name="building"  value="casino"></input>
+    <button type="submit">Find Gold!</button>
+</form>
+</div> #end of building row
+        </div>
+        <div class ="bot">
+            <table>
+            <h3>Activities:</h3>
+            <ul class="bottom" name ="activities" value="log" class="activities">
+                {% for activity in session.activities %}
+                <li name="activities"  class="log" >{{activity}}
+                </li>
+                {% endfor %}
+            </ul>
+
+            </table>
+        </div>
+    </div>
+</div> #end of container
+</div> # end of main row
+
+ <!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+</body>
+</html>
